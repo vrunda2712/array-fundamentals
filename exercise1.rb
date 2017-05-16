@@ -1,7 +1,7 @@
 #array
 
 fav_colours = ["blue","green",:red]
-age = [20,22,21]
+age = [20,30,21,27]
 coin = ["heads","tails","tails","heads","heads"]
 artists = ["Laurie Anderson","Franko B","Troy Banarzi"]
 
@@ -89,3 +89,24 @@ puts "#{age.sort!.reverse!}"
 puts
 puts "4. Added new movie into movie_info : #{movie_info[:Beauty_and_the_beast]=[1991,2017]}"
 puts " #{movie_info}"
+
+#exercise 4
+puts
+puts "-------------------EXERCISE 4--------------------------"
+puts "1. Ages less than 25"
+
+puts age.select {|a| a < 25}
+puts
+puts "2. Oldest person in array with : "
+puts "#{age.min} years"
+puts
+puts "3. How many time heads been flipped"
+puts "#{coin.count("heads")}"
+puts
+puts "4. Remove artist from list: "
+puts "#{artists.delete("Laurie Anderson")}"
+puts "#{artists}"
+puts
+puts "5. Change population of ottawa with: "
+puts "#{city_info[:ottawa]=800000}"
+puts "#{city_info}"
