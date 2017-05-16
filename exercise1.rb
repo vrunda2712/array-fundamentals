@@ -30,3 +30,14 @@ name_info = {
   ash: 22,
   nik: 20
 }
+
+#exercise 1
+puts "Array of coin is : #{coin}"
+puts
+puts "first element of fav_colours array #{fav_colours[0]}"
+puts
+puts "Sorted list of ages #{age.sort}"
+puts
+puts "Added a baby in age #{age<<0}"
+puts
+puts "Logan movie released in #{movie_info[:logan]} "
