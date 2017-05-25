@@ -93,20 +93,131 @@ puts " #{movie_info}"
 #exercise 4
 puts
 puts "-------------------EXERCISE 4--------------------------"
-puts "1. Ages less than 25"
-
+puts "1. Ages less than 25 are : "
 puts age.select {|a| a < 25}
 puts
 puts "2. Oldest person in array with : "
 puts "#{age.min} years"
 puts
 puts "3. How many time heads been flipped"
-puts "#{coin.count("heads")}"
+puts "#{coin.count("heads")} times"
 puts
 puts "4. Remove artist from list: "
 puts "#{artists.delete("Laurie Anderson")}"
 puts "#{artists}"
 puts
 puts "5. Change population of ottawa with: "
-puts "#{city_info[:ottawa]=800000}"
+puts "#{city_info[:ottawa]=800500}"
 puts "#{city_info}"
+
+#exercise 5
+puts
+puts "-------------------EXERCISE 5--------------------------"
+puts "1. Total population of all cities: "
+puts city_info.values.reduce(:+)
+puts
+puts "2. Printed Statements are : "
+name = name_info.each do |name,age|
+  # puts "---#{name} is #{age<25}"
+  if (age<25 == true)
+    puts "---#{name} is young."
+  else
+    puts "---#{name} is old."
+  end
+end
+puts
+puts "3. Last two colours of array are : "
+puts "#{fav_colours.last(2)}"
+puts
+puts "4. Increased age of 1 year to all persons of array is : "
+# age.each do |ages|
+#  age << ages + 1
+# end
+# puts "#{ages}"
+puts
+puts "5. Add new colours to array is : "
+puts "#{fav_colours += ["white","black"]}"
+
+#exercise 6.1
+puts
+puts "-------------------EXERCISE 6.1--------------------------"
+puts "1. Make a new hash contains list of movies: "
+
+new_movies = {
+  1999 => ["the matrix","star wars:episode 1","the mummy"],
+  2009 => ["avatar","star trek","district 9"],
+  2019 => ["how to train your dragon 3","toy story 4","star wars","episode 9"]
+}
+puts new_movies
+puts
+puts "2. Make a new array: "
+
+key_pad = [[1,2,3],[4,5,6],[7,8,9],["*",0,"#"]]
+puts key_pad
+puts
+puts "3. Make a array contains info about three countries: "
+
+countries = [
+  {
+    name: "UK",
+    continent: "Europe",
+    island: "yes"
+  },
+  {
+    name: "Canada",
+    continent: "North America",
+    island: "no"
+  },
+  {
+    name: "India",
+    continent: "Asia",
+    island: "no"
+  }
+]
+puts countries
+
+#exercise 6.2
+puts
+puts "-------------------EXERCISE 6.2--------------------------"
+puts "1. Output the message 20 times: "
+
+20.times do
+  puts "I will not skateboard in the halls: "
+end
+puts
+puts "2. Create array and display message 20 times in array: "
+
+disp = []
+20.times do
+  disp.push("I will not skateboard in the halls")
+end
+p disp
+puts
+puts "3. Create an array of the numbers between 1 and 50: "
+num = []
+50.times do |nums|
+  num.push(nums += 1)
+end
+p num
+puts
+puts "4. Find the sum of the numbers in array: "
+sum = 0
+num.each do |nums|
+  sum += nums
+end
+p sum
+puts
+puts "5. Create a new array which has three of each number up to 50: "
+num = []
+50.times do |nums|
+  nums += 1
+  3.times do |no|
+    num.push(nums)
+  end
+end
+p num.sort
+puts
+puts "6. Make a new array out all of the countries from the hash in Exercise 6 that are not islands. Print out both arrays: "
+nonisland_countries = ["Canada","India"]
+p nonisland_countries,countries
+puts "--------------------------------------------------------------"
